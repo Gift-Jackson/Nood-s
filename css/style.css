@@ -30,12 +30,14 @@
     /* --primary-color: #3498db; */
     --gradient: linear-gradient(to right bottom, orangered, orange);
     --primary-color:orange;
-    --secondary-color: #1b1e3e;
-    --bg-light: #121322;
+    --secondary-color: #212121;
+    --bg-light: #121212;
+    /* --secondary-color: #1b1e3e;
+    --bg-light: #121322; */
     --white:#fefefe;
     --dark:#303030;
     --text-color:#fefefe;
-    --border:#2d3055;
+    --border:#212121;
     --border-focus:#bbb;
     --grey:#aaa;
 }
@@ -68,7 +70,7 @@ html {
 }
 
 body{
-    background: var(--gradient);
+    background: var(--primary-color);
     height: 100vh;
 }
 
@@ -265,10 +267,10 @@ body.dark-theme .categories li{
     gap: 1rem;
 }
 .dishItem{
-    text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
     padding: .5rem .5rem 1rem;
     border-radius: .5rem;
+    height: auto;
 }
 body.dark-theme .dishItem{
     background-color: var(--secondary-color);
@@ -298,8 +300,9 @@ body.dark-theme .dishItem{
     padding: .5rem 1rem;
     border-radius: .5rem;
     border: 0;
-    background: var(--gradient);
+    background: var(--primary-color);
     color: var(--white);
+    width: 100%;
 }
 .dishItem button:focus-within{
     outline: 2px solid var(--primary-color);
@@ -430,7 +433,7 @@ body.dark-theme .dishItem{
         z-index: 1;
     }
     #contents{
-        padding-top: 70px;
+        padding-top: 60px;
     }
 
     .mainContainer header.active{

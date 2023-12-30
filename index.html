@@ -20,19 +20,20 @@
 <body>
 
     <div id="app">
-            <div class="splashScreen">
-                <div>
-                    <h1 data-aos="fade-up" class="brand"><span class="orange">N</span><span class="green">OO</span><span class="orange">D's</span></h1>
-                    <p><span class="mark">&quot;</span>Indulge in a Symphony of Noodle Delights, Right at Your
-                        Doorstep<span class="mark">&quot;</span></p>
-                </div>
-
-                <button class="closeSplashScreen" onclick="closeSplashScreen()">
-                    Yes...yes, I want!
-                    &nbsp;
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+        <div class="splashScreen">
+            <div>
+                <h1 data-aos="fade-up" class="brand"><span class="orange">N</span><span class="green">OO</span><span
+                        class="orange">D's</span></h1>
+                <p><span class="mark">&quot;</span>Indulge in a Symphony of Noodle Delights, Right at Your
+                    Doorstep<span class="mark">&quot;</span></p>
             </div>
+
+            <button class="closeSplashScreen" onclick="closeSplashScreen()">
+                Yes...yes, I want!
+                &nbsp;
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
 
         <div class="mainContainer">
             <header>
@@ -106,67 +107,73 @@
                         <span class="material-symbols-outlined">
                             search
                         </span>
-                        <input type="text" placeholder="Search for dishes...">
+                        <input type="text" placeholder="Search for dishes..." id="searchBar">
                     </div>
 
                     <!-- Dishes -->
                     <div class="dishContainer">
-                        <div class="dishItem">
-                            <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                            <h2 class="dishName">Native Noodles</h2>
-                            <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice or
-                                noodles.</p>
-                            <p><b></b></p>
-                            <table>
-                                <tr>
-                                    <td style="text-align: left;"><b>Price:</b></td>
-                                    <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                </tr>
-                            </table>
-                            <button onclick="order('chicken')">Yes, I want</button>
-                        </div>
-                        <div class="dishItem">
-                            <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                            <h2 class="dishName">Native Noodles</h2>
-                            <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice or
-                                noodles.</p>
-                            <p><b></b></p>
-                            <table>
-                                <tr>
-                                    <td style="text-align: left;"><b>Price:</b></td>
-                                    <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                </tr>
-                            </table>
-                            <button onclick="order('chicken')">Yes, I want</button>
-                        </div>
-                        <div class="dishItem">
-                            <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                            <h2 class="dishName">Native Noodles</h2>
-                            <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice or
-                                noodles.</p>
-                            <p><b></b></p>
-                            <table>
-                                <tr>
-                                    <td style="text-align: left;"><b>Price:</b></td>
-                                    <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                </tr>
-                            </table>
-                            <button onclick="order('chicken')">Yes, I want</button>
-                        </div>
-                        <div class="dishItem">
-                            <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                            <h2 class="dishName">Native Noodles</h2>
-                            <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice or
-                                noodles.</p>
-                            <p><b></b></p>
-                            <table>
-                                <tr>
-                                    <td style="text-align: left;"><b>Price:</b></td>
-                                    <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                </tr>
-                            </table>
-                            <button onclick="order('chicken')">Yes, I want</button>
-                        </div>
+                        <template>
+                            <div class="dishItem">
+                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
+                                <h2 class="dishName">Native Noodles</h2>
+                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
+                                    or
+                                    noodles.</p>
+                                <p><b></b></p>
+                                <table>
+                                    <tr>
+                                        <td style="text-align: left;"><b>Price:</b></td>
+                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
+                                    </tr>
+                                </table>
+                                <button onclick="order('chicken')">Yes, I want</button>
+                            </div>
+                            <div class="dishItem">
+                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
+                                <h2 class="dishName">Native Noodles</h2>
+                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
+                                    or
+                                    noodles.</p>
+                                <p><b></b></p>
+                                <table>
+                                    <tr>
+                                        <td style="text-align: left;"><b>Price:</b></td>
+                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
+                                    </tr>
+                                </table>
+                                <button onclick="order('chicken')">Yes, I want</button>
+                            </div>
+                            <div class="dishItem">
+                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
+                                <h2 class="dishName">Native Noodles</h2>
+                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
+                                    or
+                                    noodles.</p>
+                                <p><b></b></p>
+                                <table>
+                                    <tr>
+                                        <td style="text-align: left;"><b>Price:</b></td>
+                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
+                                    </tr>
+                                </table>
+                                <button onclick="order('chicken')">Yes, I want</button>
+                            </div>
+                            <div class="dishItem">
+                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
+                                <h2 class="dishName">Native Noodles</h2>
+                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
+                                    or
+                                    noodles.</p>
+                                <p><b></b></p>
+                                <table>
+                                    <tr>
+                                        <td style="text-align: left;"><b>Price:</b></td>
+                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
+                                    </tr>
+                                </table>
+                                <button onclick="order('chicken')">Yes, I want</button>
+                            </div>
+                        </template>
 
                     </div>
                 </div>
@@ -180,6 +187,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
