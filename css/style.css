@@ -83,19 +83,14 @@ body{
 }
 
 /* splashScreen */
-
 .splashScreen{
-    position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: var(--bg-light);
     display: flex;
+    justify-content: center;
     align-items: center;
-    z-index: 999;
     transition: all .3s ease;
-}
-.splashScreen.inactive{
-    top: -200%;
 }
 .splashContent{
     width: 80%;
@@ -115,6 +110,9 @@ body{
     border-radius: 119px 45px 165px 86px;
     -webkit-border-radius: 119px 45px 165px 86px;
     -moz-border-radius: 119px 45px 165px 86px;
+}
+.splashContent h3{
+    margin-top: 1rem;
 }
 .splashContent button{
     margin-top: 3rem;
@@ -394,8 +392,8 @@ body.dark-theme .dishItem{
     .splashContent{
         width: 90%;
     }
-    .splashContent h1{
-        font-size: 20px;
+    .splashContent h3{
+        font-size: 16px;
     }
     .socialMedia a{
         height: 60px;

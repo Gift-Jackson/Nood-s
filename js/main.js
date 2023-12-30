@@ -27,16 +27,14 @@ themeToggle.addEventListener("click", () => {
 })
 
 function openMenuPage() {
-    homePage.classList.add("hide")
-    menuPage.classList.remove("hide")
+    window.location.href = '/menu.html'
 }
 function closeMenuPage() {
-    homePage.classList.remove("hide")
-    menuPage.classList.add("hide")
+    window.location.href = '/home.html'
 }
 
 function closeSplashScreen() {
-    splashScreen.classList.add("inactive")
+    window.location.href = '/home.html'
 }
 
 

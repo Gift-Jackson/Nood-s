@@ -1,0 +1,70 @@
+:root{
+    --gradient: linear-gradient(to right bottom, orangered, orange);
+    --primary-color: #ffa500;
+    --secondary-color: #f7f7f7;
+    --bg-light: #fefefe;
+    --white:#fefefe;
+    --dark:#303030;
+    --text-color:#4a4a4a;
+    --border:#eee;
+    --border-focus:#bbb;
+    --grey:#aaa;
+}
+
+.dark-theme{
+    --gradient: linear-gradient(to right bottom, orangered, orange);
+    --primary-color:orange;
+    --secondary-color:rgba(255,255,255,.07);
+    --bg-light: #121212;
+    --white:#fefefe;
+    --dark:#121212;
+    --text-color:#fefefe;
+    --border:#212121;
+    --border-focus:#bbb;
+    --grey:#aaa;
+}
+
+#app{
+    position: relative;
+}
+
+.transition{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-light);
+    z-index: 9;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: .2;
+    transition: opacity .5s ease-in-out;
+    z-index: 99;
+}
+.transition.active{
+    display: flex;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.transition-content{
+    text-align: center;
+}
+
+.spinner{
+    height: 50px;
+    width: 50px;
+    margin: 1rem auto;
+    border: 5px solid var(--secondary-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin .3s ease infinite;
+}
+
+@keyframes spin {
+    100%{
+        transform: rotate(1turn);
+    }
+}
