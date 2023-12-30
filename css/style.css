@@ -335,7 +335,7 @@ body.dark-theme .dishItem{
     transition-delay: .5s;
 }
 .splashScreen.inactive{
-    top: -100%;
+    top: -200%;
 }
 .splashScreen div{
     width: 80%;
