@@ -21,163 +21,116 @@
 
     <div id="app">
         <div class="splashScreen">
-            <div>
-                <h1 data-aos="fade-up" class="brand"><span class="orange">N</span><span class="green">OO</span><span
-                        class="orange">D's</span></h1>
-                <p><span class="mark">&quot;</span>Indulge in a Symphony of Noodle Delights, Right at Your
-                    Doorstep<span class="mark">&quot;</span></p>
-            </div>
-
-            <button class="closeSplashScreen" onclick="closeSplashScreen()">
-                Yes...yes, I want!
-                &nbsp;
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-
-        <div class="mainContainer">
-            <header>
-                <div class="menuToggle">
-                    <div class="menuBar"></div>
+            <div class="splashContent">
+                <div>
+                    <img src="assets/logo.png" alt="Noods Logo">
+                    <h1 data-aos="fade-up">Satisfy Your Cravings!</h1>
                 </div>
 
-                <button class="themeToggle">
-                    <i class="fa-solid fa-moon"></i>
-                    <i class="fa-solid fa-sun hide"></i>
-                    &nbsp;
-                    <span class="themeName">Dark</span>
+                <button onclick="closeSplashScreen()">
+                    Order Now &nbsp; <i class="fa-solid fa-arrow-right fa-bounce"></i>
                 </button>
+            </div>
+        </div>
+
+        <div class="homePage">
+            <header>
+                <div class="left-header">
+                    <a href="/">
+                        <button class="prevBtn">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="right-header">
+                    <!-- <button class="themeToggle">
+                        <i class="fa-regular fa-moon"></i>
+                        <i class="fa-regular fa-sun"></i>
+                    </button> -->
+
+                    <button class="themeToggle">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun hide"></i>
+                        &nbsp;
+                        <span class="themeName">Dark</span>
+                    </button>
+                </div>
             </header>
 
             <main>
-                <div id="contents">
-                    <div class="home">
-                        <div class="hero-container" data-aos="fade-up" data-aos-delay="500">
-                            <h1>Welcome to <span class="brand mark">Nood's</span>! 🍜</h1>
-                            <p>Satisfy your cravings - Order Now!</p>
-                        </div>
+                <div class="heroContainer">
+                    <h1>Welcome to <span class="brand mark">Nood's</span>! 🍜</h1>
+                    <p>Satisfy your cravings - Order Now!</p>
+                </div>
 
-                        <!-- Search Box -->
-                        <div class="searchContainer" onclick="openMenuPage()">
-                            <span class="material-symbols-outlined">
-                                search
-                            </span>
-                            <input type="text" placeholder="Search for dishes..." readonly>
-                        </div>
+                <a href="menu.html">
+                    <div class="clickableSearch">
+                        <p>Search for your craves...</p>
+                        <i class="fa-solid fa-magnifying-glass fa-bounce"></i>
+                    </div>
+                </a>
 
-                        <!-- Category Container -->
-                        <div class="categoryContainer" data-aos="zoom-in-down">
-                            <h3 class="title">Categories</h3>
-                            <p><small>These are what we have on our menu_</small></p>
-                            <ul class="categories">
-                                <li onclick="openMenuPage()">
-                                    <img src="assets/spag.png" alt="Pasta">
-                                    <h4>Pasta</h4>
-                                </li>
-                                <li onclick="openMenuPage()">
-                                    <img src="assets/noods.png" alt="Pasta">
-                                    <h4>Noodles</h4>
-                                </li>
-                            </ul>
-                        </div>
+                <!-- Category Container -->
+                <div class="categoryContainer" data-aos="zoom-in-down">
+                    <h3 class="title">Categories</h3>
+                    <!-- <p><small>These are what we have on our menu_</small></p> -->
+                    <ul class="categories">
+                        <li onclick="openMenuPage()">
+                            <img src="assets/spag.png" alt="Pasta">
+                            <h4>Pasta</h4>
+                        </li>
+                        <li onclick="openMenuPage()">
+                            <img src="assets/noods.png" alt="Pasta">
+                            <h4>Noodles</h4>
+                        </li>
+                    </ul>
+                </div>
 
-                        <!-- location -->
-                        <div class="locationContainer">
-                            <h3 class="title">Main Locations 📍</h3>
-                            <p><small>We deliver to these locations..._</small></p>
-                            <ol class="locations" type="1">
-                                <li>Abia State.</li>
-                                <li>Imo State, Owerri</li>
-                                <li>Rivers State, Port Hartcourt</li>
-                            </ol>
+                <!-- Add-0ns -->
+                <div class="addOnContainer">
+                    <h3 class="title">Add-Ons</h3>
+                    <p><small>Some of our add-ons to spice it up!</small></p>
+                    <div class="add-ons">
+                        <div class="add-on-item">
+                            <img src="assets/chicken.png" alt="">
+                            <h4>Fried Chicken</h4>
+                        </div>
+                        <div class="add-on-item">
+                            <img src="assets/bacon.png" alt="">
+                            <h4>Bacon/Suya</h4>
+                        </div>
+                        <div class="add-on-item">
+                            <img src="assets/egg.png" alt="">
+                            <h4>Eggs</h4>
+                        </div>
+                        <div class="add-on-item">
+                            <img src="assets/coke.png" alt="">
+                            <h4>Drinks</h4>
                         </div>
                     </div>
                 </div>
 
-                <div class="menu hide">
-                    <span>
-                        <button class="closeMenu" onclick="closeMenuPage()"><i class="fa-solid fa-arrow-left"></i>
-                            &nbsp; Back</button>
-                    </span>
-                    <div class="hero-container">
-                        <h1>Search <span class="brand mark">Nood's</span>! 🍜</h1>
-                    </div>
-                    <!-- Search Box -->
-                    <div class="searchContainer">
-                        <span class="material-symbols-outlined">
-                            search
-                        </span>
-                        <input type="text" placeholder="Search for dishes..." id="searchBar">
-                    </div>
-
-                    <!-- Dishes -->
-                    <div class="dishContainer">
-                        <template>
-                            <div class="dishItem">
-                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                                <h2 class="dishName">Native Noodles</h2>
-                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
-                                    or
-                                    noodles.</p>
-                                <p><b></b></p>
-                                <table>
-                                    <tr>
-                                        <td style="text-align: left;"><b>Price:</b></td>
-                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                    </tr>
-                                </table>
-                                <button onclick="order('chicken')">Yes, I want</button>
-                            </div>
-                            <div class="dishItem">
-                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                                <h2 class="dishName">Native Noodles</h2>
-                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
-                                    or
-                                    noodles.</p>
-                                <p><b></b></p>
-                                <table>
-                                    <tr>
-                                        <td style="text-align: left;"><b>Price:</b></td>
-                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                    </tr>
-                                </table>
-                                <button onclick="order('chicken')">Yes, I want</button>
-                            </div>
-                            <div class="dishItem">
-                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                                <h2 class="dishName">Native Noodles</h2>
-                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
-                                    or
-                                    noodles.</p>
-                                <p><b></b></p>
-                                <table>
-                                    <tr>
-                                        <td style="text-align: left;"><b>Price:</b></td>
-                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                    </tr>
-                                </table>
-                                <button onclick="order('chicken')">Yes, I want</button>
-                            </div>
-                            <div class="dishItem">
-                                <img class="dishImg" src="assets/indomie.png" alt="Chicken Stir Fry">
-                                <h2 class="dishName">Native Noodles</h2>
-                                <p class="dishDescription">Spicy chicken stir fried with vegetables and served with rice
-                                    or
-                                    noodles.</p>
-                                <p><b></b></p>
-                                <table>
-                                    <tr>
-                                        <td style="text-align: left;"><b>Price:</b></td>
-                                        <td style="text-align: right;"><b class="dishPrice">₦2500</b></td>
-                                    </tr>
-                                </table>
-                                <button onclick="order('chicken')">Yes, I want</button>
-                            </div>
-                        </template>
-
-                    </div>
+                <!-- location -->
+                <div class="locationContainer">
+                    <h3 class="title">Main Locations 📍</h3>
+                    <p><small>We deliver to these locations..._</small></p>
+                    <ol class="locations" type="1">
+                        <li>Around Abia State.</li>
+                        <li>Imo State, Owerri.</li>
+                        <li>Rivers State, Port Hartcourt.</li>
+                    </ol>
                 </div>
 
+                <!-- Social Media -->
+                <div class="socialMediaContainer">
+                    <h3 class="title">Social Media 💬</h3>
+                    <p><small>Follow us on social media._</small></p>
+                    <div class="socialMedia">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>                        
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
@@ -192,6 +145,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+2347067116962", // WhatsApp number
+                call_to_action: "Message us", // Call to action
+                position: "right", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
     </script>
 </body>
 

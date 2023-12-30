@@ -8,9 +8,9 @@ const products = [
     },
     {
         id: 1,
-        image: 'assets/Suya noodles.jpg',
-        title: 'Suya Noodles',
-        description: 'Hot and spicy suya noodles with suya chunks.',
+        image: 'assets/Creamy pasta and chicken.jpg',
+        title: 'Creamy pasta and chicken',
+        description: 'The special taste of an Italian recipe,with a rich and creamy taste.',
         price: '₦2500'
     },
     {
@@ -29,9 +29,9 @@ const products = [
     },
     {
         id: 4,
-        image: 'assets/Creamy pasta and chicken.jpg',
-        title: 'Creamy pasta and chicken',
-        description: 'The special taste of an Italian recipe,with a rich and creamy taste.',
+        image: 'assets/Suya noodles.jpg',
+        title: 'Suya Noodles',
+        description: 'Hot and spicy suya noodles with suya chunks.',
         price: '₦2500'
     },
     {
@@ -69,8 +69,10 @@ const displayItem = (items) => {
             `
             <div class="dishItem">
                 <img class="dishImg" src="${image}">
+                <div>
                 <h2 class="dishName">${title}</h2>
                 <p class="dishDescription">${description}</p>
+                </div>
                 <table>
                     <tr>
                         <td style="text-align: left;"><b>Price:</b></td>
