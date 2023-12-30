@@ -9,17 +9,17 @@ const header = document.querySelector(".mainContainer header")
 
 let body = document.body;
 
-let lastScroll = 0;
+// let lastScroll = 0;
 
-window.addEventListener("scroll", () => {
-    if (scrollY > lastScroll) {
-        header.classList.add("active")
-    }
-    else {
-        header.classList.remove("active")
-    }
-    lastScroll = window.scrollY;
-})
+// window.addEventListener("scroll", () => {
+//     if (scrollY > lastScroll) {
+//         header.classList.add("active")
+//     }
+//     else {
+//         header.classList.remove("active")
+//     }
+//     lastScroll = window.scrollY;
+// })
 
 themeToggle.addEventListener("click", () => {
     body.classList.toggle("dark-theme")
