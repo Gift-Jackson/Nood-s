@@ -351,6 +351,14 @@ body.dark-theme .searchContainer span{
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
+.dishContainer .error{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .7;
+    font-weight: bold;
+}
 .dishItem{
     /* box-shadow: 0 10px 30px rgba(0,0,0,.08); */
     background-color: var(--secondary-color);
@@ -375,6 +383,7 @@ body.dark-theme .dishItem{
 
 .dishItem h2{
     font-size: 17px;
+    margin-bottom: .5rem;
 }
 .dishItem p{
     font-size: 13px;
