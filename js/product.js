@@ -67,7 +67,7 @@ const displayItem = (items) => {
 
         return (
             `
-            <div class="dishItem">
+            <div class="dishItem" data-aos="zoom-in">
                 <img class="dishImg" src="${image}">
                 <div>
                 <h2 class="dishName">${title}</h2>

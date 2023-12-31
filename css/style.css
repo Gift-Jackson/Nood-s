@@ -18,7 +18,7 @@
     --secondary-color: #f7f7f7;
     --bg-light: #fefefe;
     --white:#fefefe;
-    --dark:#303030;
+    --dark:#121212;
     --text-color:#4a4a4a;
     --border:#eee;
     --border-focus:#bbb;
@@ -86,7 +86,7 @@ body{
 .splashScreen{
     height: 100vh;
     width: 100%;
-    background-color: var(--bg-light);
+    background-color: var(--dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,17 +102,28 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
 }
-
+.splashContent div{
+    opacity: 0;
+    transform: translateY(100px);
+    animation: splash .5s ease 500ms 1 forwards;
+}
+@keyframes splash {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .splashContent img{
     width: 100%;
     background-color: var(--dark);
     padding: 1rem;
-    border-radius: 119px 45px 165px 86px;
+    /* border-radius: 119px 45px 165px 86px;
     -webkit-border-radius: 119px 45px 165px 86px;
-    -moz-border-radius: 119px 45px 165px 86px;
+    -moz-border-radius: 119px 45px 165px 86px; */
 }
 .splashContent h3{
     margin-top: 1rem;
+    color: var(--primary-color);
 }
 .splashContent button{
     margin-top: 3rem;
@@ -123,6 +134,9 @@ body{
     border-bottom: 4px solid rgba(0,0,0,.5);
     background-color: var(--primary-color);
     font-weight: bold;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: splash .5s ease 1000ms 1 forwards;
 }
 
 .splashContent button:active{
@@ -189,6 +203,9 @@ main{
     width: 90%;
     margin: auto;
     padding-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: splash .5s ease 1000ms 1 forwards;
 }
 .mark{
     color: var(--primary-color);
@@ -216,7 +233,9 @@ main{
     justify-content: space-between;
     padding: 0 1rem;
     border-radius: .5rem;
-
+}
+main a{
+    cursor: default;
 }
 /* Categories */
 .categoryContainer{

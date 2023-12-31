@@ -43,6 +43,10 @@
     transition: opacity .5s ease-in-out;
     z-index: 99;
 }
+
+.transition h3{
+    opacity: .7;
+}
 .transition.active{
     display: flex;
     opacity: 1;
