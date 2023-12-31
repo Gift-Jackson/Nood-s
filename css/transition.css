@@ -37,8 +37,6 @@
     background-color: var(--bg-light);
     z-index: 9;
     display: none;
-    justify-content: center;
-    align-items: center;
     opacity: .2;
     transition: opacity .5s ease-in-out;
     z-index: 99;
@@ -48,12 +46,14 @@
     opacity: .7;
 }
 .transition.active{
-    display: flex;
+    display: block;
     opacity: 1;
     transition: opacity .5s ease-in-out;
 }
 
 .transition-content{
+    width: 80%;
+    margin: 50% auto;
     text-align: center;
 }
 
