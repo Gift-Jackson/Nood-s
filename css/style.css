@@ -404,6 +404,7 @@ body.dark-theme .dishItem{
     #app{
         width: 100%;
         min-height: 100vh;
+        overflow: scroll;
     }
     header{
         position: fixed;
@@ -414,14 +415,12 @@ body.dark-theme .dishItem{
         z-index: 5;
     }
     .homePage, .menuPage{
-        padding-top: 60px;
+        padding-top: 65px;
+        height: auto;
     }
 }
 @media screen and (max-width: 390px) {
-    #app{
-        width: 100%;
-        min-height: 100vh;
-    }
+    
     .splashContent{
         width: 90%;
     }
