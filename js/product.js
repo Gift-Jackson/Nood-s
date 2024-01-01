@@ -84,7 +84,7 @@ const displayItem = (items) => {
                             <td style="text-align: right;"><b class="dishPrice">${price}.00</b></td>
                         </tr>
                     </table>
-                    <button onclick="order('chicken')">Yes, I want</button>
+                    <button onclick="order()">Yes, I want</button>
                 </div>`
             );
         }).join('');

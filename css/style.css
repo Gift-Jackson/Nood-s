@@ -408,6 +408,123 @@ body.dark-theme .dishItem{
     outline-offset: 1px;
 }
 
+/* checkOutContainer */
+
+.checkOutContainer img{
+    width: 100%;
+    height: auto;
+    outline: 2px dashed var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 1rem;
+}
+.dishImage{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.form-container{
+    margin-top: 1rem;
+}
+.form-container form, .input-control,.form-control{
+    display: flex;
+    flex-direction: column;
+}
+.input-control{
+    margin-bottom: 1rem;
+}
+.input-control input{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border);
+    padding: .7rem;
+    border-radius: .5rem;
+    margin-top: .3rem;
+}
+
+.input-control input:focus-within{
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.countinueBtn{
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    border-bottom: 4px solid rgba(0,0,0,.2);
+}
+
+.countinueBtn:active{
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+.countinueBtn i{
+    color: var(--white);
+}
+.paymentContainer h4{
+    margin-bottom: 1rem;
+}
+.form-control{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-control input{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border);
+    padding: .7rem;
+    border-radius: .5rem;
+    margin-top: .3rem;
+}
+.form-control span{
+    position: absolute;
+    right: 0;
+    top: 60%;
+    transform: translateY(-40%);
+    background-color: var(--primary-color);
+    padding: .6rem 1rem;
+    border-radius: .5rem;
+}
+.formBtns{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+.formBtns button{
+    padding: .8rem;
+    font-size: .9rem;
+    width: 100%;
+}
+
+.backBtn{
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: .5rem;
+}
+.backBtn i{
+    color: var(--text-color);
+}
+#submitBtn{
+    padding: .8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: .5rem;
+    border: 0;
+    border-bottom: 4px solid rgba(0,0,0,.2);
+}
+
+.formBtns button:focus-within{
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* .inputs.hide{
+    display: none;
+} */
+
+
 /* responsiveness */
 @media screen and (max-width: 550px) {
     #app{

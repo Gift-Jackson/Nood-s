@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nood's | Checkout</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transition.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="transition active">
+            <div class="transition-content">
+                <div class="spinner"></div>
+                <h3>Cooking 🍜...</h3>
+            </div>
+        </div>
+        <div class="homePage checkOutPage">
+            <header>
+                <div class="left-header">
+                    <a href="/menu.html">
+                        <button class="prevBtn">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="right-header">
+                    <button class="themeToggle">
+                        <i class="fa-regular fa-moon"></i>
+                        <i class="fa-regular fa-sun hide"></i>
+                        &nbsp;
+                        <span class="themeName">Dark</span>
+                    </button>
+                </div>
+            </header>
+            <main>
+                <div class="heroContainer">
+                    <h1><span class="brand mark">CheckOUT</span>! 🍜</h1>
+                </div>
+
+                <div class="checkOutContainer">
+                    <!-- <span class="material-symbols-outlined">close</span> -->
+                    <div class="dishImage">
+                        <img src="assets/Suya noodles.jpg" alt="">
+                    </div>
+                    <div class="form-container">
+                        <form>
+                            <div class="inputs">
+                                <div class="input-control">
+                                    <label for="name">Full name:</label>
+                                    <input type="text" name="FullName" id="name" placeholder="What can I call you?"
+                                        required>
+                                </div>
+                                <div class="input-control">
+                                    <label for="number">Phone number:</label>
+                                    <input type="number" name="DishName" id="dishName"
+                                        placeholder="Preferably What'sApp" required>
+                                </div>
+                                <div class="input-control">
+                                    <label for="address">Delivery address:</label>
+                                    <input type="text" name="address" id="address" placeholder="Where can I meet you?"
+                                        required>
+                                </div>
+                                <div class="input-control">
+                                    <label for="dishName">Dish name:</label>
+                                    <input type="text" name="dishName" id="dishName" value="Creamy pasta and chicken" readonly>
+                                </div>
+                                <div class="input-control">
+                                    <label for="dishPrice">Dish price:</label>
+                                    <input type="text" name="dishPrice" id="dishPrice" value="2500" placeholder="₦" readonly>
+                                </div>
+                                <div class="input-control">
+                                    <label for="number-of-plate">Number of plates:</label>
+                                    <input type="number" name="number-of-plate" id="number-of-plate" value="1" required>
+                                </div>
+                                <div class="countinueBtn">
+                                    Continue to checkout &nbsp; <i class="fa-solid fa-arrow-right fa-shake"></i>
+                                </div>
+                            </div>
+
+                            <div class="paymentContainer hide">
+                                <h4>Make Payment to the Bank details below! 👇</h3>
+                                <div class="form-control">
+                                    <label for="bank">Access Bank</label>
+                                    <input type="text" id="acctNum" value="0123456789" readonly>
+                                    <span onclick="copyNumber()">
+                                        <i class="fa-regular fa-copy"></i>
+                                        &nbsp;
+                                        <b>Copy</b>
+                                    </span>
+                                </div>
+                                <div class="formBtns">
+                                    <button class="backBtn">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                        &nbsp;
+                                        Go back
+                                    </button>
+                                    <button type="submit" id="submitBtn">
+                                        I have made Payment
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/routing.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
