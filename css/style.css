@@ -409,7 +409,13 @@ body.dark-theme .dishItem{
 }
 
 /* checkOutContainer */
-
+.inputs{
+    transition: all .3s ease-in-out;
+}
+.inputs.inactive{
+    opacity: .1;
+    transform: scale(.9) translateY(-50px) rotate(45deg);
+}
 .checkOutContainer img{
     width: 100%;
     height: auto;
@@ -425,6 +431,10 @@ body.dark-theme .dishItem{
 .form-container{
     margin-top: 1rem;
 }
+.countinueBtn.hide{
+    display: none;
+}
+
 .form-container form, .input-control,.form-control{
     display: flex;
     flex-direction: column;
@@ -432,12 +442,30 @@ body.dark-theme .dishItem{
 .input-control{
     margin-bottom: 1rem;
 }
+.input-control.hide{
+    display: none;
+}
 .input-control input{
     background-color: var(--secondary-color);
     border: 1px solid var(--border);
     padding: .7rem;
     border-radius: .5rem;
     margin-top: .3rem;
+}
+
+.errorMsg{
+    position:fixed;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-color: rgba(246, 190, 201, .9);
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    border: 2px solid #dc143c;
+    border-radius: .5rem;
+    display: none;
 }
 
 .input-control input:focus-within{
@@ -463,12 +491,32 @@ body.dark-theme .dishItem{
 .countinueBtn i{
     color: var(--white);
 }
+
+.paymentContainer{
+    display: none;
+    transition: all .2s ease-in-out;
+}
+
+.paymentContainer.active{
+    transform: translateY(-100%);
+    display: block;
+}
 .paymentContainer h4{
     margin-bottom: 1rem;
+}
+.amountContainer{
+    background-color: var(--secondary-color);
+    padding: .8rem .5rem .5rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+.amount{
+    font-size: 1.5rem;
 }
 .form-control{
     position: relative;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .form-control input{
     background-color: var(--secondary-color);

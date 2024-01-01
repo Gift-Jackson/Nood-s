@@ -53,6 +53,7 @@
                     <!-- <span class="material-symbols-outlined">close</span> -->
                     <div class="dishImage">
                         <img src="assets/Suya noodles.jpg" alt="">
+                        <h4 id="dishNameDisplay"></h4>
                     </div>
                     <div class="form-container">
                         <form>
@@ -72,13 +73,13 @@
                                     <input type="text" name="address" id="address" placeholder="Where can I meet you?"
                                         required>
                                 </div>
+                                <!-- <div class="input-control"> -->
+                                    <!-- <label for="dishName">Dish name:</label> -->
+                                    <input type="hidden" name="dishName" id="dishName" value="" readonly>
+                                <!-- </div> -->
                                 <div class="input-control">
-                                    <label for="dishName">Dish name:</label>
-                                    <input type="text" name="dishName" id="dishName" value="Creamy pasta and chicken" readonly>
-                                </div>
-                                <div class="input-control">
-                                    <label for="dishPrice">Dish price:</label>
-                                    <input type="text" name="dishPrice" id="dishPrice" value="2500" placeholder="₦" readonly>
+                                    <label for="dishPrice">Dish price (₦):</label>
+                                    <input type="text" name="dishPrice" id="dishPrice" value="" placeholder="₦" readonly>
                                 </div>
                                 <div class="input-control">
                                     <label for="number-of-plate">Number of plates:</label>
@@ -89,8 +90,12 @@
                                 </div>
                             </div>
 
-                            <div class="paymentContainer hide">
+                            <div class="paymentContainer">
                                 <h4>Make Payment to the Bank details below! 👇</h3>
+                                <label class="amountContainer">
+                                    <span class="icon">₦</span>
+                                    <span class="amount"></span>
+                                </label>
                                 <div class="form-control">
                                     <label for="bank">Access Bank</label>
                                     <input type="text" id="acctNum" value="0123456789" readonly>
@@ -102,9 +107,9 @@
                                 </div>
                                 <div class="formBtns">
                                     <button class="backBtn">
-                                        <i class="fa-solid fa-arrow-left"></i>
+                                        <i class="fa-regular fa-pen-to-square fa-flip"></i>
                                         &nbsp;
-                                        Go back
+                                        Edit form
                                     </button>
                                     <button type="submit" id="submitBtn">
                                         I have made Payment
@@ -117,6 +122,10 @@
                     </div>
                 </div>
             </main>
+        </div>
+
+        <div class="errorMsg">
+            Please fill in all required fields.
         </div>
     </div>
 
