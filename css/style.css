@@ -436,8 +436,9 @@ body.dark-theme .dishItem{
     transform: scale(.8) translateY(-50px);
 }
 .checkOutContainer img{
-    width: auto;
-    height: 300px;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
     outline: 2px dashed var(--primary-color);
     outline-offset: 2px;
     border-radius: 1rem;
@@ -445,7 +446,7 @@ body.dark-theme .dishItem{
 }
 .dishImage{
     text-align: center;
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 .dishImage h4{
