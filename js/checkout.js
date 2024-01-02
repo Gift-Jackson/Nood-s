@@ -48,7 +48,7 @@ const paymentContainer = document.querySelector(".paymentContainer")
 
 
 function copyNumber() {
-    let copyText = document.querySelector(".form-control span b")
+    let copyText = document.querySelector(".copyInput span b")
     let acctNum = document.querySelector("#acctNum")
 
     copyText.textContent = "Copied"
@@ -112,7 +112,7 @@ orderForm.addEventListener("submit", (e) => {
         // Do not submit the form if there are empty fields
         return false;
     }
-
+    
     const totalPrice = parseFloat(totalPriceInput.value);
     const numberOfPlates = parseInt(numberOfPlatesInput.value);
     const imageUrl = selectedProduct.image;
@@ -122,7 +122,7 @@ orderForm.addEventListener("submit", (e) => {
     localStorage.setItem("imageUrl", imageUrl);
 
     // Redirect to success page
-    window.location.href = "/success.html";
+    // window.location.href = "/success.html";
 
     // Continue with the form submission if all fields are filled
     orderForm.submit();

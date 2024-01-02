@@ -18,7 +18,7 @@
     --secondary-color: #f7f7f7;
     --bg-light: #fefefe;
     --white:#fefefe;
-    --dark:black;
+    --dark:linear-gradient(45deg, #121212, #212121);
     --text-color:#4a4a4a;
     --border:#eee;
     --border-focus:#bbb;
@@ -29,9 +29,9 @@
     --gradient: linear-gradient(to right bottom, orangered, orange);
     --primary-color:orange;
     --secondary-color:rgba(255,255,255,.07);
-    --bg-light: #121212;
+    --bg-light:linear-gradient(to top right, #121212 70%, #212121);
     --white:#fefefe;
-    --dark:#121212;
+    --dark:linear-gradient(45deg, #121212, #212121);
     --text-color:#fefefe;
     --border:#212121;
     --border-focus:#bbb;
@@ -78,7 +78,7 @@ body{
     width: 500px;
     min-height: 100vh;
     margin: auto;
-    background-color: var(--bg-light);
+    background: var(--bg-light);
     overflow: hidden;
     position: relative;
 }
@@ -88,7 +88,7 @@ body{
 .splashScreen{
     height: 100vh;
     width: 100%;
-    background-color: var(--dark);
+    background: var(--dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +117,6 @@ body{
 }
 .splashContent img{
     width: 100%;
-    background-color: var(--dark);
     padding: 1rem;
     transform: scale(0);
     opacity: 0;
@@ -193,9 +192,9 @@ header button{
     /* box-shadow: 0 5px 10px rgba(0,0,0,.05); */
     transition: .5s;
 }
-body.dark-theme header button{
+/* body.dark-theme header button{
     box-shadow: 0 10px 30px rgba(0,0,0,.8);
-}
+} */
 
 .prevBtn{
     font-size: 1.2rem;
@@ -429,11 +428,13 @@ body.dark-theme .dishItem{
 
 /* checkOutContainer */
 .inputs{
+    pointer-events: all;
     transition: all .3s ease-in-out;
 }
 .inputs.inactive{
     opacity: .4;
-    transform: scale(.8) translateY(-50px);
+    transform: scale(.5) translateY(-250px);
+    pointer-events: none;
 }
 .checkOutContainer img{
     height: auto;
@@ -484,13 +485,18 @@ body.dark-theme .dishItem{
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
-    background-color: rgba(246, 190, 201, .9);
-    padding: 1rem;
+    /* background-color: rgba(246, 190, 201, .9); */
+    background-color: crimson;
+    padding: .4rem;
     width: 80%;
     text-align: center;
     border: 2px solid #dc143c;
     border-radius: .5rem;
     display: none;
+    color: var(--white);
+}
+body.dark-theme .errorMsg{
+
 }
 
 .input-control input:focus-within{
@@ -523,7 +529,7 @@ body.dark-theme .dishItem{
 }
 
 .paymentContainer.active{
-    transform: translateY(-100px);
+    transform: translateY(-300px);
     display: block;
 }
 .paymentContainer h4{
@@ -538,23 +544,25 @@ body.dark-theme .dishItem{
 .amount{
     font-size: 1.5rem;
 }
-.form-control{
-    position: relative;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+.payment{
+   margin: 1rem 0;
 }
-.form-control input{
+.copyInput{
+    position: relative;
+}
+.copyInput input{
     background-color: var(--secondary-color);
     border: 1px solid var(--border);
     padding: .7rem;
     border-radius: .5rem;
     margin-top: .3rem;
+    width: 100%;
 }
-.form-control span{
+.copyInput span{
     position: absolute;
     right: 0;
-    top: 60%;
-    transform: translateY(-40%);
+    top: 55%;
+    transform: translateY(-50%);
     background-color: var(--primary-color);
     padding: .6rem 1rem;
     border-radius: .5rem;
@@ -616,6 +624,7 @@ body.dark-theme .dishItem{
         left: 0;
         width: 100%;
         background-color: var(--bg-light);
+        backdrop-filter: blur(10px);
         z-index: 5;
     }
     .homePage, .menuPage{

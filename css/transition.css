@@ -2,9 +2,9 @@
     --gradient: linear-gradient(to right bottom, orangered, orange);
     --primary-color: #ffa500;
     --secondary-color: #f7f7f7;
-    --bg-light: #fefefe;
+    /* --bg-light: #fefefe; */
     --white:#fefefe;
-    --dark:#303030;
+    /* --dark:#303030; */
     --text-color:#4a4a4a;
     --border:#eee;
     --border-focus:#bbb;
@@ -15,9 +15,9 @@
     --gradient: linear-gradient(to right bottom, orangered, orange);
     --primary-color:orange;
     --secondary-color:rgba(255,255,255,.07);
-    --bg-light: #121212;
+    /* --bg-light: #121212; */
     --white:#fefefe;
-    --dark:#121212;
+    /* --dark:#121212; */
     --text-color:#fefefe;
     --border:#212121;
     --border-focus:#bbb;
@@ -34,7 +34,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--bg-light);
+    background: var(--bg-light);
     z-index: 9;
     display: none;
     opacity: .2;
