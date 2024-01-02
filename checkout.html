@@ -48,6 +48,9 @@
                 <div class="heroContainer">
                     <h1><span class="brand mark">CheckOUT</span>! 🍜</h1>
                 </div>
+                <div class="info">
+                    Kindly note that all our packages comes with free delivery!
+                </div>
 
                 <div class="checkOutContainer">
                     <!-- <span class="material-symbols-outlined">close</span> -->
@@ -56,34 +59,35 @@
                         <h4 id="dishNameDisplay"></h4>
                     </div>
                     <div class="form-container">
-                        <form>
+                        <form id="contactform" action="https://formsubmit.io/send/3a9ef0dc-265b-4e45-9ceb-0d928a045720" method="POST">
+                            <input name="_redirect" type="hidden" id="name" value="https://noods-v1.netlify.app/success.html">
                             <div class="inputs">
                                 <div class="input-control">
                                     <label for="name">Full name:</label>
                                     <input type="text" name="FullName" id="name" placeholder="What can I call you?"
-                                        required>
+                                        >
                                 </div>
                                 <div class="input-control">
                                     <label for="number">Phone number:</label>
-                                    <input type="number" name="DishName" id="dishName"
-                                        placeholder="Preferably What'sApp" required>
+                                    <input type="number" name="phoneNumber" id="number"
+                                        placeholder="Preferably What'sApp" >
                                 </div>
                                 <div class="input-control">
                                     <label for="address">Delivery address:</label>
                                     <input type="text" name="address" id="address" placeholder="Where can I meet you?"
-                                        required>
+                                        >
                                 </div>
-                                <!-- <div class="input-control"> -->
-                                    <!-- <label for="dishName">Dish name:</label> -->
-                                    <input type="hidden" name="dishName" id="dishName" value="" readonly>
-                                <!-- </div> -->
+                                <div class="input-control">
+                                    <label for="dishName">Dish name:</label>
+                                    <input type="text" name="dishName" id="dishName" value="" readonly>
+                                </div>
                                 <div class="input-control">
                                     <label for="dishPrice">Dish price (₦):</label>
                                     <input type="text" name="dishPrice" id="dishPrice" value="" placeholder="₦" readonly>
                                 </div>
                                 <div class="input-control">
                                     <label for="number-of-plate">Number of plates:</label>
-                                    <input type="number" name="number-of-plate" id="number-of-plate" value="" required>
+                                    <input type="number" name="number-of-plate" id="number-of-plate" value="" >
                                 </div>
                                 <div class="countinueBtn">
                                     Continue to checkout &nbsp; <i class="fa-solid fa-arrow-right fa-shake"></i>

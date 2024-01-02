@@ -4,7 +4,7 @@ window.onload = () => {
   
     setTimeout(() => {
       transition_el.classList.remove("active")
-    }, 500);
+    }, 200);
   
   
     anchors.forEach((anchor) => {
@@ -17,7 +17,7 @@ window.onload = () => {
   
         setTimeout(() => {
           window.location.href = target;
-        }, 500);
+        }, 200);
       });
     })
   }

@@ -18,7 +18,7 @@
     --secondary-color: #f7f7f7;
     --bg-light: #fefefe;
     --white:#fefefe;
-    --dark:#121212;
+    --dark:black;
     --text-color:#4a4a4a;
     --border:#eee;
     --border-focus:#bbb;
@@ -116,12 +116,31 @@ body{
     }
 }
 .splashContent img{
-    width: 100%;
+    width: 80%;
     background-color: var(--dark);
     padding: 1rem;
+    transform: scale(0);
+    opacity: 0;
     /* border-radius: 119px 45px 165px 86px;
     -webkit-border-radius: 119px 45px 165px 86px;
     -moz-border-radius: 119px 45px 165px 86px; */
+    animation: img 2s ease 500ms 1 forwards;
+}
+@keyframes img {
+    0%{
+        transform: scale(0);
+    }
+    30%{
+        transform: scale(.7);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
 }
 .splashContent h3{
     margin-top: 1rem;
@@ -129,8 +148,8 @@ body{
 }
 .splashContent button{
     margin-top: 3rem;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: .8rem 2rem;
+    font-size: 1rem;
     border-radius: 50px;
     border: 0;
     border-bottom: 4px solid rgba(0,0,0,.5);
@@ -413,20 +432,25 @@ body.dark-theme .dishItem{
     transition: all .3s ease-in-out;
 }
 .inputs.inactive{
-    opacity: .1;
-    transform: scale(.9) translateY(-50px) rotate(45deg);
+    opacity: .4;
+    transform: scale(.8) translateY(-50px);
 }
 .checkOutContainer img{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 300px;
     outline: 2px dashed var(--primary-color);
     outline-offset: 2px;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 .dishImage{
     text-align: center;
     width: 80%;
     margin: auto;
+}
+.dishImage h4{
+    color: var(--primary-color);
+    text-transform: uppercase;
 }
 .form-container{
     margin-top: 1rem;
@@ -498,7 +522,7 @@ body.dark-theme .dishItem{
 }
 
 .paymentContainer.active{
-    transform: translateY(-100%);
+    transform: translateY(-100px);
     display: block;
 }
 .paymentContainer h4{
@@ -568,9 +592,14 @@ body.dark-theme .dishItem{
     outline-offset: 2px;
 }
 
-/* .inputs.hide{
-    display: none;
-} */
+.info{
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+    padding: .5rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
 
 
 /* responsiveness */

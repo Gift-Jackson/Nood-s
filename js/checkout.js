@@ -30,6 +30,7 @@ function updateTotalPrice() {
         totalPriceInput.value = total.toFixed(2);
         const dishPriceDisplay = document.querySelector('.amount');
         dishPriceDisplay.textContent = totalPriceInput.value;
+        const nop = document
     } else {
         console.error("Error calculating total price.");
     }
@@ -75,37 +76,54 @@ countinueBtn.addEventListener("click", () => {
     inputs.classList.add("inactive")
 })
 
-const submitBtn = document.getElementById("submitBtn")
+const orderForm = document.getElementById("contactform");
+const errorMsg = document.querySelector(".errorMsg");
 
-submitBtn.addEventListener("click", (e) => {
+orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const nameInput = document.getElementById("name");
     const phoneNumberInput = document.getElementById("number");
     const addressInput = document.getElementById("address");
     const numberOfPlatesInput = document.getElementById("number-of-plate");
-    const errorMsg = document.querySelector(".errorMsg")
 
     if (
-        nameInput.value === "" ||
-        phoneNumberInput.value === "" ||
-        addressInput.value === "" ||
-        numberOfPlatesInput.value === ""
+        nameInput.value.trim() === "" ||
+        phoneNumberInput.value.trim() === "" ||
+        addressInput.value.trim() === "" ||
+        numberOfPlatesInput.value.trim() === ""
     ) {
-        dishImage.classList.remove("hide")
+        // Show error message
+        errorMsg.style.display = "block";
+        setTimeout(() => {
+            errorMsg.style.display = "none";
+        }, 2500);
+
+        // Add or remove classes to show/hide elements
+        dishImage.classList.remove("hide");
         countinueBtn.classList.remove("hide");
         paymentContainer.classList.remove("active");
-        inputs.classList.remove("inactive")
-        
-        errorMsg.style.display = "block";
-        setTimeout(()=>{
-            errorMsg.style.display="none"
-        }, 2500)
+        inputs.classList.remove("inactive");
+
+        console.log("Not submitted")
+
+        // Do not submit the form if there are empty fields
+        return false;
     }
-    else {
-        return true;
-    }
-})
+
+    const totalPrice = parseFloat(totalPriceInput.value);
+    const numberOfPlates = parseInt(numberOfPlatesInput.value);
+
+    localStorage.setItem("totalPrice", totalPrice.toFixed(2));
+    localStorage.setItem("numberOfPlates", numberOfPlates);
+
+    // Redirect to success page
+    window.location.href = "/success.html";
+
+    // Continue with the form submission if all fields are filled
+    orderForm.submit();
+});
+
 
 
 
