@@ -116,7 +116,7 @@ body{
     }
 }
 .splashContent img{
-    width: 80%;
+    width: 100%;
     background-color: var(--dark);
     padding: 1rem;
     transform: scale(0);
