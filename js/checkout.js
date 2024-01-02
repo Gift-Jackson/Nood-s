@@ -82,6 +82,8 @@ const errorMsg = document.querySelector(".errorMsg");
 orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
     const nameInput = document.getElementById("name");
     const phoneNumberInput = document.getElementById("number");
     const addressInput = document.getElementById("address");
