@@ -529,7 +529,7 @@ body.dark-theme .errorMsg{
 }
 
 .paymentContainer.active{
-    transform: translateY(-300px);
+    transform: translateY(-250px);
     display: block;
 }
 .paymentContainer h4{
