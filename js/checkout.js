@@ -113,9 +113,11 @@ orderForm.addEventListener("submit", (e) => {
 
     const totalPrice = parseFloat(totalPriceInput.value);
     const numberOfPlates = parseInt(numberOfPlatesInput.value);
+    const imageUrl = selectedProduct.image;
 
     localStorage.setItem("totalPrice", totalPrice.toFixed(2));
     localStorage.setItem("numberOfPlates", numberOfPlates);
+    localStorage.setItem("imageUrl", imageUrl);
 
     // Redirect to success page
     window.location.href = "/success.html";
