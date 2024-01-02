@@ -53,7 +53,7 @@
 
                 <div class="successContainer checkOutContainer">
                     <div class="dishImage">
-                        <img src="assets/Suya noodles.jpg" alt="">
+                        <img src="assets/Chinese noodles with chicken.png" alt="">
                         <h4 id="dishNameDisplay"></h4>
                     </div>
                     <div class="info">
@@ -144,10 +144,12 @@
         document.addEventListener("DOMContentLoaded", function () {
             const totalPrice = localStorage.getItem("totalPrice");
             const numberOfPlates = localStorage.getItem("numberOfPlates");
+            const imageUrl = localStorage.getItem("imageUrl");
 
             // Update the elements on the success page
             document.querySelector(".amount").textContent = totalPrice;
             document.querySelector(".nop").textContent = numberOfPlates;
+            document.querySelector(".dishImage img").src = imageUrl;
         });
     </script>
 </body>
