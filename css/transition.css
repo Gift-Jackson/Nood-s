@@ -1,28 +1,4 @@
-:root{
-    --gradient: linear-gradient(to right bottom, orangered, orange);
-    --primary-color: #ffa500;
-    --secondary-color: #f7f7f7;
-    /* --bg-light: #fefefe; */
-    --white:#fefefe;
-    /* --dark:#303030; */
-    --text-color:#4a4a4a;
-    --border:#eee;
-    --border-focus:#bbb;
-    --grey:#aaa;
-}
 
-.dark-theme{
-    --gradient: linear-gradient(to right bottom, orangered, orange);
-    --primary-color:orange;
-    --secondary-color:rgba(255,255,255,.07);
-    /* --bg-light: #121212; */
-    --white:#fefefe;
-    /* --dark:#121212; */
-    --text-color:#fefefe;
-    --border:#212121;
-    --border-focus:#bbb;
-    --grey:#aaa;
-}
 
 #app{
     position: relative;

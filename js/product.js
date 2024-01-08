@@ -8,9 +8,9 @@ const products = [
     },
     {
         id: 1,
-        image: 'assets/Creamy pasta and chicken.jpg',
-        title: 'Creamy pasta and chicken',
-        description: 'The special taste of an Italian recipe, with a rich and creamy taste.',
+        image: 'assets/Delicious Oriental rice and chicken.jpg',
+        title: 'Delicious Oriental rice and chicken',
+        description: 'well- garnished intercontinental rice delightful to your tastebuds.',
         price: '₦3500'
     },
     {
@@ -30,7 +30,7 @@ const products = [
     {
         id: 4,
         image: 'assets/Suya noodles.jpg',
-        title: 'Suya Noodles',
+        title: 'Spicy Suya Noodles',
         description: 'Hot and spicy suya noodles with suya chunks.',
         price: '₦3500'
     },
@@ -46,6 +46,20 @@ const products = [
         image: 'assets/Chinese noodles with chicken.png',
         title: 'Chinese noodles with chicken',
         description: 'Special taste of an intercontinental dish bringing joy to your taste buds.',
+        price: '₦3500'
+    },
+    {
+        id: 7,
+        image: 'assets/Creamy pasta and chicken.jpg',
+        title: 'Creamy pasta and chicken',
+        description: 'The special taste of an Italian recipe, with a rich and creamy taste.',
+        price: '₦3500'
+    },
+    {
+        id: 8,
+        image: 'assets/Well-garnished Fried rice and chicken.jpg',
+        title: 'Fried rice and chicken',
+        description: 'Well-garnished fried rice and chicken.',
         price: '₦3500'
     },
 ];

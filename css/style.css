@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Rubik+Doodle+Shadow&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Poppins&family=Rubik+Doodle+Shadow&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
     outline: none;
     text-decoration: none;
     color: var(--text-color);
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     user-select: none;
     transition: background-color .5s ease;
 }
@@ -18,7 +17,7 @@
     --secondary-color: #f7f7f7;
     --bg-light: #fefefe;
     --white:#fefefe;
-    --dark:linear-gradient(45deg, #121212, #212121);
+    --dark:linear-gradient(-60deg, #121212 50%, #212121);
     --text-color:#4a4a4a;
     --border:#eee;
     --border-focus:#bbb;
@@ -31,7 +30,7 @@
     --secondary-color:rgba(255,255,255,.07);
     --bg-light:linear-gradient(to top right, #121212 70%, #212121);
     --white:#fefefe;
-    --dark:linear-gradient(45deg, #121212, #212121);
+    /* --dark:linear-gradient(to right, #121212 50%, #212121 20%); */
     --text-color:#fefefe;
     --border:#212121;
     --border-focus:#bbb;
@@ -116,10 +115,11 @@ body{
     }
 }
 .splashContent img{
-    width: 100%;
+    width: 70%;
     padding: 1rem;
     transform: scale(0);
     opacity: 0;
+    /* margin: auto; */
     /* border-radius: 119px 45px 165px 86px;
     -webkit-border-radius: 119px 45px 165px 86px;
     -moz-border-radius: 119px 45px 165px 86px; */
@@ -149,11 +149,11 @@ body{
     margin-top: 3rem;
     padding: 1rem 2rem;
     font-size: 1.1rem;
-    border-radius: 50px;
+    border-radius: 1rem;
     border: 0;
     border-bottom: 4px solid rgba(0,0,0,.5);
     background-color: var(--primary-color);
-    font-weight: bold;
+    font-weight: 600;
     opacity: 0;
     transform: translateY(100px);
     animation: splash .5s ease 1000ms 1 forwards;
@@ -162,14 +162,17 @@ body{
 .splashContent button:active{
     background-color: var(--dark);
     color: var(--white);
+    border-bottom: unset;
 }
 .splashContent button:active i{
     color: var(--white);
 }
 
 .splashContent button:focus-within{
-    outline: 3px solid var(--primary-color);
-    outline-offset: 3px;
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
+    outline-offset: 1px;
+    box-shadow: 0 0 5px orangered;
 }
 
 /* Homepage */
@@ -199,10 +202,23 @@ header button{
 .prevBtn{
     font-size: 1.2rem;
 }
+.prevBtn:focus-within{
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
+    outline-offset: 1px;
+    box-shadow: 0 0 5px orangered;
+}
 .themeToggle{
     display: flex;
     align-items: center;
     gap: .5rem;
+    transition: .2s;
+}
+.themeToggle:focus-within{
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
+    outline-offset: 1px;
+    box-shadow: 0 0 5px orangered;
 }
 .themeToggle i{
     font-size: 1.2rem;
@@ -358,8 +374,12 @@ body.dark-theme .searchContainer span{
     background-color: var(--bg-light);
 }
 .searchContainer input:focus-within{
-    outline: 2px solid var(--primary-color);
+    /* outline: 2px solid var(--primary-color);
+    outline-offset: 2px; */
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
     outline-offset: 2px;
+    box-shadow: 0 0 5px orangered;
 }
 
 /* dishContainer */
@@ -397,6 +417,7 @@ body.dark-theme .dishItem{
     height: auto;
     margin-bottom: 1rem;
     border-radius: .2rem;
+    object-fit: contain;
 }
 
 .dishItem h2{
@@ -420,10 +441,15 @@ body.dark-theme .dishItem{
     background: var(--primary-color);
     color: var(--white);
     width: 100%;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+    transition: .2s;
 }
+
 .dishItem button:focus-within{
-    outline: 2px solid var(--primary-color);
-    outline-offset: 1px;
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
+    outline-offset: 2px;
+    box-shadow: 0 0 5px orangered;
 }
 
 /* checkOutContainer */
@@ -495,13 +521,12 @@ body.dark-theme .dishItem{
     display: none;
     color: var(--white);
 }
-body.dark-theme .errorMsg{
-
-}
 
 .input-control input:focus-within{
-    outline: 3px solid var(--primary-color);
-    outline-offset: 3px;
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
+    outline-offset: 1px;
+    box-shadow: 0 0 5px orangered;
 }
 
 .countinueBtn{
@@ -513,11 +538,12 @@ body.dark-theme .errorMsg{
     align-items: center;
     border-radius: .5rem;
     border-bottom: 4px solid rgba(0,0,0,.2);
+    /* transition: .2s; */
 }
 
 .countinueBtn:active{
-    outline: 3px solid var(--primary-color);
-    outline-offset: 3px;
+    border-bottom: unset;
+    transform: scale(.9);
 }
 .countinueBtn i{
     color: var(--white);
@@ -566,6 +592,10 @@ body.dark-theme .errorMsg{
     background-color: var(--primary-color);
     padding: .6rem 1rem;
     border-radius: .5rem;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+}
+.copyInput span:active{
+    border-bottom: unset;
 }
 .formBtns{
     display: flex;
@@ -584,6 +614,12 @@ body.dark-theme .errorMsg{
     background-color: transparent;
     border-radius: .5rem;
 }
+.backBtn:focus-within{
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
+    outline-offset: 1px;
+    box-shadow: 0 0 5px orangered;
+}
 .backBtn i{
     color: var(--text-color);
 }
@@ -594,11 +630,18 @@ body.dark-theme .errorMsg{
     border-radius: .5rem;
     border: 0;
     border-bottom: 4px solid rgba(0,0,0,.2);
+    /* transition: .2s; */
+}
+#submitBtn:active{
+    border-bottom: unset;
+    transform: scale(.9);
 }
 
 .formBtns button:focus-within{
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+    border: 1px solid var(--primary-color);
+    outline: 3px solid rgba(255, 165, 0, .5);
+    outline-offset: 1px;
+    box-shadow: 0 0 5px orangered;
 }
 
 .info{
@@ -624,7 +667,7 @@ body.dark-theme .errorMsg{
         left: 0;
         width: 100%;
         background-color: var(--bg-light);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(30px);
         z-index: 5;
     }
     .homePage, .menuPage{

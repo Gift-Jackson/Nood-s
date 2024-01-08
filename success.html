@@ -109,8 +109,10 @@
         }
 
         .successContainer button:focus-within {
-            outline: 3px solid var(--primary=color);
-            outline-offset: 3px;
+            border: 1px solid var(--primary-color);
+            outline: 3px solid rgba(255, 165, 0, .5);
+            outline-offset: 1px;
+            box-shadow: 0 0 5px orangered;
         }
 
         .callBtn {
@@ -124,10 +126,12 @@
             height: 200px;
             width: auto;
         }
-        .fa-square-check{
+
+        .fa-square-check {
             color: mediumseagreen;
         }
-        body.dark-theme .fa-square-check{
+
+        body.dark-theme .fa-square-check {
             color: mediumspringgreen;
         }
     </style>
