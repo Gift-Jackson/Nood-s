@@ -149,9 +149,9 @@ body{
     margin-top: 3rem;
     padding: 1rem 2rem;
     font-size: 1.1rem;
-    border-radius: 1rem;
+    border-radius: 50px;
     border: 0;
-    border-bottom: 4px solid rgba(0,0,0,.5);
+    /* border-bottom: 4px solid rgba(0,0,0,.5); */
     background-color: var(--primary-color);
     font-weight: 600;
     opacity: 0;
