@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nood's | Checkout</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transition.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="transition is-active"></div>
+    <div id="app">
+        <div class="homePage checkOutPage">
+            <header>
+                <div class="left-header">
+                  <a href="home.html" class="flex">
+                    <span class="material-symbols-outlined back-icon">
+                      arrow_back
+                    </span>
+                  </a>
+                </div>
+                <div class="right-header">
+                  <div class="theme-btn">
+                    <span class="material-symbols-outlined themeName"> dark_mode </span>
+                  </div>
+                  <div class="search-icon" onclick="openAndCloseMenu()" style="display: none;">
+                    <span class="material-symbols-outlined srch"> search </span>
+                  </div>
+                </div>
+              </header>
+            <main>
+                <div class="heroContainer">
+                    <h1><span class="brand mark">Checkout!</span> 🍜</h1>
+                </div>
+                <div class="info">
+                    Kindly note that all our packages comes with free delivery!
+                </div>
+
+                <div class="checkOutContainer">
+                    <div class="dishImage">
+                        <img src="assets/Suya noodles.jpg" alt="">
+                        <h4 id="dishNameDisplay"></h4>
+                    </div>
+                    <div class="form-container">
+                        <form id="contactform" action="https://formsubmit.io/send/3a9ef0dc-265b-4e45-9ceb-0d928a045720"
+                            method="POST">
+                            <input name="_redirect" type="hidden" id="name"
+                                value="https://noods-v1.netlify.app/success.html">
+                            <div class="inputs">
+                                <div class="input-control">
+                                    <label for="name">Full name:</label>
+                                    <input type="text" name="FullName" id="name" placeholder="What can I call you?" autocomplete="off">
+                                </div>
+                                <div class="input-control">
+                                    <label for="number">Phone number:</label>
+                                    <input type="tel" name="phoneNumber" id="number"
+                                        placeholder="Preferably What'sApp">
+                                </div>
+                                <div class="input-control">
+                                    <label for="address">Delivery address:</label>
+                                    <input type="text" name="address" id="address" placeholder="Where can I meet you?">
+                                </div>
+                                <div class="input-control">
+                                    <label for="dishName">Dish name:</label>
+                                    <input type="text" name="dishName" id="dishName" value="" readonly>
+                                </div>
+                                <div class="input-control">
+                                    <label for="dishPrice">Dish price (₦):</label>
+                                    <input type="text" name="dishPrice" id="dishPrice" value="" placeholder="₦"
+                                        readonly>
+                                </div>
+                                <div class="input-control">
+                                    <label for="number-of-plate">Number of plates:</label>
+                                    <input type="number" name="number-of-plate" id="number-of-plate">
+                                </div>
+                                <div class="countinueBtn">
+                                    Continue to checkout &nbsp; <i class="fa-solid fa-arrow-right fa-shake"></i>
+                                </div>
+                            </div>
+
+                            <div class="paymentContainer">
+                                <h4>Make Payment to the Bank details below! 👇</h3>
+                                    <label class="amountContainer">
+                                        <span class="icon">₦</span>
+                                        <span class="amount"></span>
+                                    </label>
+                                    <div class="payment">
+                                        <div for="bank-details">
+                                            <table style="width: 100%;">
+                                                <tr>
+                                                    <td style="text-align: left;"><b>Bank Name:</b></td>
+                                                    <td style="text-align: right;"><b
+                                                            style="color: var(--primary-color);">FCMB</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;"><b>Account Name:</b></td>
+                                                    <td style="text-align: right;"><b
+                                                            style="color: var(--primary-color);">MAMAMELA FOOD VENTURES
+                                                        </b></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="copyInput">
+                                            <input type="text" id="acctNum" value="6098919010" readonly>
+                                            <span onclick="copyNumber()">
+                                                <i class="fa-regular fa-copy"></i>
+                                                &nbsp;
+                                                <b>Copy</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="formBtns">
+                                        <div class="backBtn">
+                                            <i class="fa-regular fa-pen-to-square fa-flip"></i>
+                                            &nbsp;
+                                            Edit form
+                                        </div>
+                                        <button type="submit" id="submitBtn">
+                                            I have made Payment
+                                        </button>
+                                    </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="errorMsg">
+            Please fill in all required fields.
+        </div>
+    </div>
+
+    <style>
+        table {
+            margin-bottom: 1rem !important;
+            border: 1px solid var(--border);
+            border-radius: .5rem;
+        }
+
+        table td {
+            border: 1px solid var(--border);
+            padding: .5rem;
+            border-radius: .5rem;
+            font-size: 13px;
+        }
+        .backBtn{
+            padding: .8rem;
+            width: 100%;
+            text-align: center;
+        }
+        #name{
+            text-transform: capitalize;
+        }
+    </style>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/routing.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

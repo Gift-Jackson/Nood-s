@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nood's</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/transition.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- MATERIAL ICON -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="transition is-active"></div>
+    <div id="app">
+      <div class="homePage checkOutPage">
+        <header>
+          <div class="left-header">
+            <a href="/checkout.html" class="flex">
+              <span class="material-symbols-outlined back-icon">
+                arrow_back
+              </span>
+            </a>
+          </div>
+          <div class="right-header">
+            <div class="theme-btn">
+              <span class="material-symbols-outlined themeName">
+                dark_mode
+              </span>
+            </div>
+            <div
+              class="search-icon"
+              onclick="openAndCloseMenu()"
+              style="display: none"
+            >
+              <span class="material-symbols-outlined srch"> search </span>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="heroContainer">
+            <h1>
+              <span class="brand mark"
+                >Success! <i class="fa-solid fa-square-check fa-shake"></i
+              ></span>
+            </h1>
+            <p>You've successful placed an order!_</p>
+          </div>
+
+          <div class="successContainer checkOutContainer">
+            <div class="dishImage">
+              <img src="assets/Chinese noodles with chicken.png" alt="" />
+              <h4 id="dishNameDisplay"></h4>
+            </div>
+            <div class="info">
+              Kindly note that all our packages comes with free delivery!
+            </div>
+            <table>
+              <tr>
+                <td style="text-align: left"><b>Total Price:</b></td>
+                <td style="text-align: right">
+                  <span class="icon">₦</span><b class="amount">4546</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left"><b>Number Of Plates:</b></td>
+                <td style="text-align: right"><b class="nop">3</b></td>
+              </tr>
+            </table>
+
+            <a
+              href="tel:+2349136309200
+                    "
+            >
+              <button class="callBtn">
+                <i class="fa-solid fa-phone fa-shake"></i>
+                &nbsp; Call Vendor
+              </button>
+            </a>
+            <a href="/checkout.html">
+              <button class="backBtn">
+                <i class="fa-solid fa-arrow-left"></i>
+                &nbsp; Go Back
+              </button>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <style>
+      .successContainer table {
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .successContainer table tr {
+        line-height: 50px;
+      }
+
+      .successContainer button {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+
+      .successContainer button:focus-within {
+        outline: 2px solid rgba(255, 165, 0, 0.3);
+        outline-offset: 2px;
+        box-shadow: 0 0 5px var(--primary-color);
+        border: 1px solid var(--primary-color);
+        background-color: var(--bg-color);
+      }
+
+      .callBtn {
+        border-radius: 50px;
+        border: 0;
+        color: var(--white);
+        background-color: var(--primary-color);
+      }
+      .callBtn:focus {
+        border-bottom: unset;
+      }
+
+      .callBtn i{
+        color: var(--white);
+      }
+      .dishImage img {
+        height: 200px;
+        width: auto;
+      }
+
+      .fa-square-check {
+        color: mediumseagreen;
+      }
+
+      body.dark-theme .fa-square-check {
+        color: mediumspringgreen;
+      }
+    </style>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/routing.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const totalPrice = localStorage.getItem("totalPrice");
+        const numberOfPlates = localStorage.getItem("numberOfPlates");
+        const imageUrl = localStorage.getItem("imageUrl");
+
+        // Update the elements on the success page
+        document.querySelector(".amount").textContent = totalPrice;
+        document.querySelector(".nop").textContent = numberOfPlates;
+        document.querySelector(".dishImage img").src = imageUrl;
+      });
+    </script>
+    <script type="text/javascript">
+      (function () {
+        var options = {
+          whatsapp: "+2349136309200", // WhatsApp number
+          call_to_action: "Message us", // Call to action
+          position: "right", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol,
+          host = "getbutton.io",
+          url = proto + "//static." + host;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = url + "/widget-send-button/js/init.js";
+        s.onload = function () {
+          WhWidgetSendButton.init(host, proto, options);
+        };
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+      })();
+    </script>
+  </body>
+</html>

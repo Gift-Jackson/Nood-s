@@ -1,0 +1,44 @@
+:root{
+    --gradient: linear-gradient(to right bottom, orangered, orange);
+    --gradient-2: linear-gradient(45deg, #fefefe, rgba(255, 165, 0, .1));
+    --primary-color: #ffa500;
+    --secondary-color: #f7f7f7;
+    --bg-color: #fefefe;
+    --bg-color-2: #fefefe;
+    --white:#fefefe;
+    --dark:#030303;
+    --text-color:#4a4a4a;
+    --border:#eee;
+    --border-focus:#bbb;
+    --grey:#aaa;
+}
+
+.dark-theme{
+    --gradient: linear-gradient(to right bottom, orangered, orange);
+    --primary-color:orange;
+    --secondary-color:rgba(255,255,255,.05);
+    --bg-color:#040b20;
+    --bg-color-2: rgba(255,255,255,.05);
+    --white:#fefefe;
+    --gradient-2:linear-gradient(45deg, #0b132b, rgba(255, 165, 0, .1));
+    --text-color:#fefefe;
+    --border:#3a506b;
+    --border-focus:#bbb;
+    --grey:#aaa;
+}
+
+.transition{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: -100%;
+    transition: .3s ease;
+}
+
+.transition.is-active{
+    left: 0;
+}
+
