@@ -30,15 +30,63 @@
 .transition{
     height: 100vh;
     width: 100%;
-    background-color: var(--primary-color);
+    background:var(--bg-color);
     position: fixed;
     z-index: 999;
     top: 0;
-    left: -100%;
+    left:0;
     transition: .3s ease;
+    display: none;
 }
 
 .transition.is-active{
-    left: 0;
+    display: block;
+}
+
+.transition-content{
+    margin: 30% auto;
+    padding: 1rem;
+    width: 70%;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+
+
+/* @keyframes content {
+    0%,
+    100%{
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+    10%,
+    90%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+.spinner{
+    height: 45px;
+    width: 45px;
+    border: 5px solid var(--secondary-color);
+    border-radius: 50%;
+    border-bottom: 5px solid var(--primary-color);
+    animation: load 300ms ease infinite forwards;
+}
+
+@keyframes load {
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+.transition-text{
+    font-weight: bold;
+    font-size: 1rem;
 }
 

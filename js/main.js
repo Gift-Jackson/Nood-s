@@ -39,13 +39,7 @@ function openAndCloseMenu() {
     }
 }
 
-function closeMenuPage() {
-    window.location.href = '/home.html'
-}
 
-function closeSplashScreen() {
-    window.location.href = '/home.html'
-}
 
 
 
