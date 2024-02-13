@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffa500">
     <title>Nood's | Satisfy your cravings</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -31,7 +32,10 @@
         <header>
           <div class="left-header">
             <a href="/" class="flex">
-              <span class="material-symbols-outlined back-icon" style="display: none;">
+              <span
+                class="material-symbols-outlined back-icon"
+                style="display: none"
+              >
                 arrow_back
               </span>
 
@@ -40,7 +44,9 @@
           </div>
           <div class="right-header">
             <div class="theme-btn">
-              <span class="material-symbols-outlined themeName"> dark_mode </span>
+              <span class="material-symbols-outlined themeName">
+                dark_mode
+              </span>
             </div>
             <div class="search-icon" onclick="openAndCloseMenu()">
               <span class="material-symbols-outlined srch"> search </span>
@@ -50,128 +56,140 @@
 
         <main>
           <div class="onboarding-container">
-              <div class="heroContainer">
-                <!-- <p>
+            <div class="heroContainer">
+              <!-- <p>
                   Welcome to <b><span class="brand mark">Nood's</span></b
                   >! 🍜
                 </p> -->
-                <p>Hi, foodie!🍜</p>
-                <h2>What are you craving for?</h2>
-                <!-- <p>Satisfy your cravings - Order Now!</p> -->
-                <button onclick="openAndCloseMenu()" class="btn">
-                  <span>Order Now</span>
-                  <span class="material-symbols-outlined symbol">
-                    restaurant_menu
-                  </span>
-                </button>
-              </div>
-              <!-- services -->
-              <div class="services onBoarding">
-                <div class="services-container">
-                  <div class="service-1">
-                    <img src="assets/food.svg" alt="food" />
-                    <p>Fast food</p>
-                  </div>
-                  <div class="service-2">
-                    <img src="assets/delivery.svg" alt="delivery" />
-                    <p>Free delivery</p>
-                  </div>
-                  <div class="service-3">
-                    <img src="assets/support.svg" alt="support" />
-                    <p>Best customer support</p>
-                  </div>
+              <p>Hi, foodie!🍜</p>
+              <h2>What are you craving for?</h2>
+              <!-- <p>Satisfy your cravings - Order Now!</p> -->
+              <button onclick="openAndCloseMenu()" class="btn">
+                <span>Order Now</span>
+                <span class="material-symbols-outlined symbol">
+                  restaurant_menu
+                </span>
+              </button>
+            </div>
+            <!-- services -->
+            <div class="services onBoarding">
+              <div class="services-container">
+                <div class="service-1">
+                  <img src="assets/food.svg" alt="food" />
+                  <p>Fast food</p>
+                </div>
+                <div class="service-2">
+                  <img src="assets/delivery.svg" alt="delivery" />
+                  <p>Free delivery</p>
+                </div>
+                <div class="service-3">
+                  <img src="assets/support.svg" alt="support" />
+                  <p>Best customer support</p>
                 </div>
               </div>
-              <!-- Category Container -->
-              <div class="categoryContainer" data-aos="zoom-in-down">
-                <h3 class="title">Categories</h3>
-                <p><small>These are what we have on our menu_</small></p>
-                <ul class="categories">
-                  <li data-aos="zoom-in" onclick="openAndCloseMenu()">
-                      <img src="assets/spag.png" alt="Pasta" />
-                      <h4>Noodles</h4>
-                  </li>
-                  <li data-aos="zoom-in" onclick="openAndCloseMenu()">
-                      <img
-                        src="assets/rice.png"
-                        alt="Pasta"
-                        style="transform: translateY(10px)"
-                      />
-                      <h4>Rice</h4>
-                  </li>
-                  <li data-aos="zoom-in" onclick="openAndCloseMenu()">
-                      <img
-                        src="assets/soup.png"
-                        alt="Pasta"
-                        style="transform: translateY(10px)"
-                      />
-                      <h4>Soup</h4>
-                  </li>
-                  <li data-aos="zoom-in" onclick="openAndCloseMenu()">
-                      <img
-                        src="assets/others.png"
-                        alt="Pasta"
-                        style="transform: translateY(10px)"
-                      />
-                      <h4>Extras</h4>
-                  </li>
-                </ul>
-              </div>
-              <!-- Add-0ns -->
-              <div class="addOnContainer">
-                <h3 class="title">Add-Ons</h3>
-                <p><small>Some of our add-ons to spice it up!</small></p>
-                <div class="add-ons">
-                  <div class="add-on-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="assets/chicken.png" alt="" />
-                    <h4>Fried Chicken</h4>
-                  </div>
-                  <div class="add-on-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="assets/bacon.png" alt="" />
-                    <h4>Bacon/Suya</h4>
-                  </div>
-                  <div class="add-on-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="assets/egg.png" alt="" />
-                    <h4>Eggs</h4>
-                  </div>
-                  <div class="add-on-item" data-aos="zoom-in">
-                    <img src="assets/coke.png" alt="" />
-                    <h4>Drinks</h4>
-                  </div>
+            </div>
+            <!-- Category Container -->
+            <div class="categoryContainer" data-aos="zoom-in-down">
+              <h3 class="title">Categories</h3>
+              <p><small>These are what we have on our menu_</small></p>
+              <ul class="categories">
+                <li data-aos="zoom-in" onclick="openAndCloseMenu()">
+                  <img src="assets/spag.png" alt="Pasta" />
+                  <h4>Noodles</h4>
+                </li>
+                <li data-aos="zoom-in" onclick="openAndCloseMenu()">
+                  <img
+                    src="assets/rice.png"
+                    alt="Pasta"
+                    style="transform: translateY(10px)"
+                  />
+                  <h4>Rice</h4>
+                </li>
+                <li data-aos="zoom-in" onclick="openAndCloseMenu()">
+                  <img
+                    src="assets/soup.png"
+                    alt="Pasta"
+                    style="transform: translateY(10px)"
+                  />
+                  <h4>Soup</h4>
+                </li>
+                <li data-aos="zoom-in" onclick="openAndCloseMenu()">
+                  <img
+                    src="assets/others.png"
+                    alt="Pasta"
+                    style="transform: translateY(10px)"
+                  />
+                  <h4>Extras</h4>
+                </li>
+              </ul>
+            </div>
+            <!-- Add-0ns -->
+            <div class="addOnContainer">
+              <h3 class="title">Add-Ons</h3>
+              <p><small>Some of our add-ons to spice it up!</small></p>
+              <div class="add-ons">
+                <div
+                  class="add-on-item"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                >
+                  <img src="assets/chicken.png" alt="" />
+                  <h4>Fried Chicken</h4>
+                </div>
+                <div
+                  class="add-on-item"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                >
+                  <img src="assets/bacon.png" alt="" />
+                  <h4>Bacon/Suya</h4>
+                </div>
+                <div
+                  class="add-on-item"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                >
+                  <img src="assets/egg.png" alt="" />
+                  <h4>Eggs</h4>
+                </div>
+                <div class="add-on-item" data-aos="zoom-in">
+                  <img src="assets/coke.png" alt="" />
+                  <h4>Drinks</h4>
                 </div>
               </div>
-              <!-- location -->
-              <div class="locationContainer">
-                <h3 class="title">Main Locations 📍</h3>
-                <p><small>We deliver to these locations..._</small></p>
-                <ol class="locations" type="1">
-                  <li data-aos="fade-right">Around Abia State.</li>
-                  <li data-aos="fade-right">Imo State, Owerri.</li>
-                  <li data-aos="fade-right">Rivers State, Port Hartcourt.</li>
-                </ol>
+            </div>
+            <!-- location -->
+            <div class="locationContainer">
+              <h3 class="title">Main Locations 📍</h3>
+              <p><small>We deliver to these locations..._</small></p>
+              <ol class="locations" type="1">
+                <li data-aos="fade-right">Around Abia State.</li>
+                <li data-aos="fade-right">Imo State, Owerri.</li>
+                <li data-aos="fade-right">Rivers State, Port Hartcourt.</li>
+              </ol>
+            </div>
+            <!-- Social Media -->
+            <div class="socialMediaContainer">
+              <h3 class="title">Social Media 💬</h3>
+              <p><small>Follow us on social media._</small></p>
+              <div class="socialMedia">
+                <a href="#" data-aos="zoom-in"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="#" data-aos="zoom-in"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/invites/contact/?i=4jfcfqwgghrf&utm_content=s5fkkcu"
+                  data-aos="zoom-in"
+                  ><i class="fab fa-instagram"></i
+                ></a>
               </div>
-              <!-- Social Media -->
-              <div class="socialMediaContainer">
-                <h3 class="title">Social Media 💬</h3>
-                <p><small>Follow us on social media._</small></p>
-                <div class="socialMedia">
-                  <a href="#" data-aos="zoom-in"
-                    ><i class="fa-brands fa-facebook-f"></i
-                  ></a>
-                  <a href="#" data-aos="zoom-in"
-                    ><i class="fa-brands fa-x-twitter"></i
-                  ></a>
-                  <a
-                    href="https://www.instagram.com/invites/contact/?i=4jfcfqwgghrf&utm_content=s5fkkcu"
-                    data-aos="zoom-in"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- Ads -->
-              <div class="adsContainer">
-                <p><small>Reserved for ads...</small></p>
-              </div>
+            </div>
+            <!-- Ads -->
+            <div class="adsContainer">
+              <p><small>Reserved for ads...</small></p>
+            </div>
           </div>
 
           <div class="menu__container hide">
@@ -182,59 +200,59 @@
             </div>
             <!-- Category -->
             <div class="category-container">
-                <input type="radio" name="category" id="all" checked />
-                <label for="all" class="category-item all">
-                  <span class="material-symbols-outlined symbol">
-                    restaurant_menu
-                  </span>
-                  <span>All</span>
-                </label>
+              <input type="radio" name="category" id="all" checked />
+              <label for="all" class="category-item all">
+                <span class="material-symbols-outlined symbol">
+                  restaurant_menu
+                </span>
+                <span>All</span>
+              </label>
 
-                <input type="radio" name="category" id="pasta" />
-                <label for="pasta" class="category-item pasta">
-                  <span class="material-symbols-outlined symbol">
-                    ramen_dining
-                  </span>
-                  <span>Pasta</span>
-                </label>
+              <input type="radio" name="category" id="pasta" />
+              <label for="pasta" class="category-item pasta">
+                <span class="material-symbols-outlined symbol">
+                  dinner_dining
+                </span>
+                <span>Pasta</span>
+              </label>
 
-                <input type="radio" name="category" id="noodles" />
-                <label for="noodles" class="category-item noodles">
-                  <span class="material-symbols-outlined symbol">
-                    ramen_dining
-                  </span>
-                  <span>Noodles</span>
-                </label>
+              <input type="radio" name="category" id="noodles" />
+              <label for="noodles" class="category-item noodles">
+                <span class="material-symbols-outlined symbol">
+                  ramen_dining
+                </span>
+                <span>Noodles</span>
+              </label>
 
-                <input type="radio" name="category" id="rice" />
-                <label for="rice" class="category-item rice">
-                  <span class="material-symbols-outlined symbol">
-                    rice_bowl
-                  </span>
-                  <span>Rice</span>
-                </label>
+              <input type="radio" name="category" id="rice" />
+              <label for="rice" class="category-item rice">
+                <span class="material-symbols-outlined symbol">
+                  rice_bowl
+                </span>
+                <span>Rice</span>
+              </label>
 
-                <input type="radio" name="category" id="soup" />
-                <label for="soup" class="category-item soup">
-                  <span class="material-symbols-outlined symbol">
-                    soup_kitchen
-                  </span>
-                  <span>Soups</span>
-                </label>
+              <input type="radio" name="category" id="soup" />
+              <label for="soup" class="category-item soup">
+                <span class="material-symbols-outlined symbol">
+                  soup_kitchen
+                </span>
+                <span>Soups</span>
+              </label>
 
-                <input type="radio" name="category" id="extra" />
-                <label for="extra" class="category-item extra">
-                  <span class="material-symbols-outlined symbol">
-                    lunch_dining
-                  </span>
-                  <span>Extra</span>
-                </label>
-              </div>
-              <div class="arrow foodSearch">
-                <img class="arrow-2" src="assets/arrow-2.svg" alt="arrow-2" />
-              </div>
+              <input type="radio" name="category" id="extra" />
+              <label for="extra" class="category-item extra">
+                <span class="material-symbols-outlined symbol">
+                  lunch_dining
+                </span>
+                <span>Extra</span>
+              </label>
+            </div>
+            <div class="arrow foodSearch">
+              <img class="arrow-2" src="assets/arrow-2.svg" alt="arrow-2" />
+            </div>
             <div class="dishContainer"></div>
-        </div>
+          </div>
         </main>
       </div>
     </div>
